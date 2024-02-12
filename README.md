@@ -1,2 +1,2 @@
 # App_GPT
-Simple chatbot
+Simple chatbot using openAI
