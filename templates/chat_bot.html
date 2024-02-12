@@ -7,26 +7,29 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #3498db;
+            background: url(https://img.freepik.com/premium-photo/photo-machine-learning-artificial-intelligence-generative-ai_849906-12647.jpg?w=1060) no-repeat center center fixed;
+            background-size: cover;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: left
             justify-content: center;
-            height: 100vh;
+            height: 50vh;
         }
 
-        .chat-container {
+
+         .chat-container {
             background-color: #ffffff;
             border: 2px solid #3498db;
-            border-radius: 20px;
-            width: 1000px; /* Increased width */
+            border-radius: 20x;
+            width: 600px; /* Increased width */
             padding: 20px; /* Increased padding */
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Added box shadow */
-            margin: auto;
+            margin: ;
             text-align: center; /* Center align text within the container */
-        }
+	}
+
 
         #chat-title {
             font-size: 24px;
@@ -80,9 +83,9 @@
 </head>
 <body>
     <div class="chat-container">
-        <div id="chat-title">IT EXPERT</div>
+        <div id="chat-title">GPT</div>
         <div id="output-box"></div>
-        <input type="text" id="user-input" placeholder="Type your message...">
+        <input type="text" id="user-input" placeholder="Type your message..." onkeydown="handleKeyPress(event)">
         <button id="send-button" onclick="sendMessage()">Send</button>
     </div>
 
@@ -111,6 +114,12 @@
                 var outputBox = document.getElementById("output-box");
                 outputBox.scrollTop = outputBox.scrollHeight;
             });
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === "Enter") {
+                sendMessage();
+            }
         }
     </script>
 </body>
