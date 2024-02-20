@@ -17,6 +17,5 @@ EXPOSE 5001
 # Define environment variable
 ENV NAME World
 
-# Run main_app.py when the container launches
-#CMD ["python3", "main_app.py"]
+# Run app.py when the container launches
 CMD python3 ./app.py
